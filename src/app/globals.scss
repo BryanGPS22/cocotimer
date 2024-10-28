@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .clock {
+    @apply w-full aspect-square rounded-full relative;
+  }
+
+  .number-hours,
+  .diallines,
+  .circle {
+    @apply w-full h-full rounded-full absolute;
+  }
+
+  .circle {
+    span {
+      @apply absolute inset-[50px] text-center rounded-full;
+    }
+  }
+
+  .number-hours {
+    span {
+      @apply absolute inset-[-28px] text-center;
+
+      p {
+        @apply text-lg;
+      }
+    }
+  }
+
+  .diallines {
+    span {
+      @apply absolute inset-[10px] text-center;
+
+      &:nth-of-type(5n) {
+        p {
+          @apply w-[3px] h-[16px];
+        }
+      }
+
+      p {
+        @apply w-[2px] h-[10px] bg-white inline-block;
+      }
+    }
+  }
+}
+
+.react-clock__face {
+  stroke: white !important; /* Warna dari garis luar jam */
+}
+
+.react-clock__hand {
+  stroke: white !important; /* Warna dari jarum jam */
+}
+
+.react-clock__mark {
+  stroke: white !important; /* Warna dari garis penanda jam */
+}
+
+.react-clock__number {
+  fill: white !important; /* Warna angka di jam */
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Pastikan modal di atas elemen lain */
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin: 0 0 10px;
+}
+
+.modal-content button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #0056b3;
+}
+
+.fullscreen-element {
+  position: relative;
+}
+
+.alarm-clock {
+  font-family: 'alarm clock', sans-serif; /* Pastikan untuk mengganti dengan nama font yang tepat */
+}
+
+.space-grotesk {
+  font-family: 'Space Grotesk', sans-serif; /* Pastikan untuk mengganti dengan nama font yang tepat */
+}
+
+@font-face {
+  font-family: 'AlarmClock';
+  src: url('/fonts/alarmclock.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-alarm-clock {
+  font-family: 'AlarmClock', sans-serif;
+}
+
+.font-satoshi {
+  font-family: 'Satoshi', sans-serif;
+}

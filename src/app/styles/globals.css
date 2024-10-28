@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'AlarmClock';
+  src: url('/fonts/alarmclock.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-alarm-clock {
+  font-family: 'AlarmClock', sans-serif;
+}
+
+.font-satoshi {
+  font-family: 'Satoshi', sans-serif;
+}
